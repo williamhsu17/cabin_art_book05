@@ -9,7 +9,7 @@
 [原始demo連結](https://www.cabindesigntaipei.com/demo/arte/05%20classical-music/index.htm)
 
 測試中的更新網頁：
-[專案Demo]()
+[專案Demo](https://williamhsu17.github.io/cabin_art_book05/)
 
 需要使用chrome並啟用flash來觀看內容
 [Ruffle.rs](https://ruffle.rs/)
