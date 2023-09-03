@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>戲劇欣賞系列-兒童劇</title>
+
+    <script src="js/htmlinclude.js"></script>
+    <include src="partial/header.html"></include>
+    <link rel="stylesheet" href="css/image-switch-button.css">
+    <script>
+        // 按照頁面需求更換
+        const thisPage = '01';
+        const thisSide = 'side_default';
+
+        const backgroundColor = '#8cdcea';
+        const mainBackground = 'images/01/nav/introduce_05n.jpg';
+        const navButtonGroupImage = '';
+        const navLogoImage = '';
+        const navBackgroundImage = '';
+    </script>
+    <style>
+        .display-none {
+            display: none;
+        }
+        .content {
+            /* border: 1px solid #aaa; */
+            background-color: transparent;
+            color: #363637;
+            font-size: 14px;
+            width: 568px;
+            margin-left: 19px;
+        }
+        .content h1 {
+            color: #e0ff05;
+            line-height: 28px;
+            font-size: 24px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .content h3 {
+            color: #CC0066;
+            line-height: 20px;
+            font-size: 15px;
+        }
+        .content .content_section {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 2px;
+            padding-bottom: 20px;
+        }
+        .content-title-image {
+            width: 100%;
+        }
+        .content-body {
+            display: flex;
+        }
+        .content-body p {
+            margin-left: 2px;
+        }
+        .content-body img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body style="background-color: #8cdcea;">
+    <div class="container mx-auto container-section" id="container-section-image">
+        <div class="row">
+            <!-- 變更：按照頁面需求更換side -->
+            <include src="partial/side_01.html"></include>
+            <!-- end變更：按照頁面需求更換side -->
+            <div class="main-section" style="width: 614px;">
+                <div class="section">
+                    <div class="nav-section" style="width: 614px; height: 80px; background-image: url('images/01/nav/title.jpg'); background-repeat: no-repeat;">
+                        <style>
+                            .side_button_group {
+                                display: flex;
+                                padding-top: 40px;
+                                padding-top: 40px;
+                                padding-left: 260px;
+                            }
+                            .image_button {
+                                display: block;
+                                width: 35px;
+                                height: 20px;
+                                margin-left: 10px;
+                                margin-right: 10px;
+                                font-size: 0;
+                                margin-bottom: 1px;
+                            }
+                            #link_01 { background-image: url("images/01/nav/button1-1.jpg"); }
+                            #link_01:hover { background-image: url("images/01/nav/button1-2.jpg"); }
+                            #link_02 { background-image: url("images/01/nav/button2-1.jpg"); }
+                            #link_02:hover { background-image: url("images/01/nav/button2-2.jpg"); }
+                            #link_03 { background-image: url("images/01/nav/button3-1.jpg"); }
+                            #link_03:hover { background-image: url("images/01/nav/button3-2.jpg"); }
+                            #link_04 { background-image: url("images/01/nav/button4-1.jpg"); }
+                            #link_04:hover { background-image: url("images/01/nav/button4-2.jpg"); }
+                            #link_05 { background-image: url("images/01/nav/button5-1.jpg"); }
+                            #link_05:hover { background-image: url("images/01/nav/button5-2.jpg"); }
+							
+							#link_03_1 { background-image: url("images/01/content/01.gif")臺灣戲劇發展; }
+                            
+                            #link_03_2 { background-image: url("images/01/content/01.gif")臺灣的兒童劇場發展; }
+							
+                        </style>
+                        <div class="side_button_group">
+                            <a href="#" class="image_button"  id="link_01" onclick="showContent('content1')"></a>
+                            <a href="#" class="image_button"  id="link_02" onclick="showContent('content2')"></a>
+                            <a href="#" class="image_button"  id="link_03" onclick="showContent('content3')"></a>
+                            <a href="#" class="image_button"  id="link_04" onclick="showContent('content4')"></a>
+                            <a href="#" class="image_button"  id="link_05" onclick="showContent('content5')"></a>
+                        </div>
+                    </div>
+                    
+                   <!--主要內容區-->
+                    <div class="main-section" id="main-section" style="width: 614px; min-height: 200px; background-repeat: repeat-y;">
+                       
+					   <!--content1頁面-->
+                        <div class="content" id="content1">
+                            <div class="" style="background-color: #1e78ab;">
+                                <h1><strong>　定義</strong></h1>
+                            </div>
+                           
+							
+                            <!--內容區塊1-->
+                            <div class="content_section" style="background-image: url('images/01/content/1-1/pic101.jpg'); height: 240px;">
+                                <h3><img src="images/01/content/icon.gif" alt=""> 什麼叫做戲劇？</h3>
+                                <p>戲劇一詞包括文字的「劇本」和在舞臺上的「演出」，前者叫「戲劇文學」，在英文中叫做 drama，後者叫「劇場」，英文叫 theatre。</p>
+                                <p style="width: 315px;">戲劇的本質是娛樂觀眾。觀眾去看戲是以娛樂為主的一種活動。雖然有時候我們也可以在戲劇中得到某種智識，但是那不是我們去看戲的原本目的，或者說：傳授智識不是戲劇的主要功能。例如老師在上課、名人在演講、候選人在發表政見等等，目的在傳授智識，或表達意見，和戲劇表演的娛樂本質是不同的。</p>
+                            </div>
+                             <!--內容區塊1 結束-->
+                             
+                             <!--內容區塊2-->
+                              <div class="content_section" style="background-image: url('images/01/content/1-1/pic102.jpg'); height: 180px;">
+                                <h3><img src="images/01/content/icon.gif" alt=""> 那麼唱歌、舞蹈呢？</h3>
+                                <p style="width: 320px;">唱歌和舞蹈也都有娛樂的功能，不過缺少了構成戲劇或劇場的兩個非常重要的要素 ─ 「戲劇情節」和「戲劇行動」。所謂「戲劇情節」就是在一齣戲中通常都有一個經過戲劇家巧妙安排，有起、承、轉、合的「故事」。「戲劇行動」則是指故事中人物的言行、舉止。簡單地說，劇本是「文學性的戲劇」，把劇本搬到舞臺上來演出叫做「劇場」。</p>
+								</div>
+                            
+                             <!--內容區塊2 結束-->
+                             
+                             <!--內容區塊3-->
+                            <div class="content_section" style="display: flex; background-color: #aeedf8;">
+                                <img src="images/01/content/1-1/pic86.jpg" alt="">
+                                <div class="sub-section" style="width: 40%;">
+								<br>
+                                    <p>在演出時，演員是舞臺上最重要的藝術家，但是要構成一個完整的劇場還必須有編劇、導演、佈景、燈光、音效、服裝、化妝等許多專門智識的技術人員和行政人員的共同合作，才能完成一場成功的演出。</p>
+                                    <p>以前劇場服務的對象是成人，到了二十世紀則出現了專為兒童製作的戲劇 ─ 「兒童劇場」（Children's theatre）。 </p>
+                                </div>
+                               
+                            </div>
+                            <!--內容區塊3 結束-->
+                        </div><!--content1頁面 結束-->
+                        
+                        
+						
+                        <!--content2頁面-->
+                        <div class="content display-none" id="content2">
+                         <div class="" style="background-color: #1e78ab;">
+                                <h1><strong>　源起</strong></h1>
+                            </div>
+                            <div class="">
+                                <h3></h3>
+                            </div>
+                            
+                            <!--內容區塊1-->
+                            <div class="content_section" style="background-image: url('images/01/content/1-2/pic75.jpg'); height: 115px;">
+                               
+                                <p style="width: 300px;"><br>
+                                戲劇源起的說法不只一種，其中以「遊戲說」和「祭典儀式說」較受大家認同。前者主張戲劇源自人類的遊戲，後者主張戲劇是從人類的祭典儀式發展出來的。</p>
+							</div><!--內容區塊1 結束-->
+                             
+                             <!--內容區塊2-->
+                              <div class="content_section" style="display: flex; background-color: #ACE8E3;">
+                               <video src="images/01/content/1-2/introduction.mp4" autoplay muted loop controls width:45%></video>
+                                <div class="sub-section" style="width: 55%; margin-left:10px" >
+                                    <br><p>戲劇、遊戲、祭典儀式有一個相似的地方，就是「模仿」。兒童玩扮家家酒是對大人生活中某些活動的模仿；演員扮演角色是模仿戲劇中的人物。不過，兒童的遊戲只是扮演者的一種自我滿足或情緒發洩的活動，也就是說：遊戲的動機和目的並不是要表演給旁邊的人看的。祭典是為了求神或酬神，參與活動群眾的目的和心態，也與劇場中的觀眾大不相同。<br />      只有戲劇是特意扮演給觀眾欣賞的，而觀眾來看戲則為了娛樂。</p>
+                                </div>
+                               
+                            </div> <!--內容區塊2 結束-->
+                             
+                             <!--內容區塊3-->
+                            <div class="content_section" style="display: flex; background-color: #FFF">
+                                
+                                <img src="images/01/content/1-2/p1-1.png" alt="" width="550px">
+                                
+                                    <p> </p>
+                                </div><!--內容區塊3 結束--> 
+                        </div><!--content2頁面 結束-->
+                        
+						
+						
+						
+                        <!--content3頁面-->
+                        <div class="content display-none" id="content3">
+                       <div class="" style="background-color: #1e78ab;">
+                                <h1><strong>　發展</strong></h1>
+
+                            </div>
+                            
+                            <p style="width:300px; margin-left:45%" align="right"><img src="images/01/content/01.gif" alt=""><a href="#" id="link_03_1" onclick="showContent('content6')">臺灣戲劇發展</a>　　　<img src="images/01/content/01.gif" alt=""><a href="#" id="link_03_1" onclick="showContent('content7')">臺灣的兒童劇場發展</a></p>
+                            
+                            <!--內容區塊1-->
+							<div class="content_section" style="display: flex; background-color: #BBF2FF;">
+                                <div class="sub-section" style="width: 80%;">
+                                    <br><p>沒有人知道從什麼時候開始，遊戲和祭典發展成戲劇。我們只知道現存西方最早的劇本寫於紀元前五世紀，有「悲劇」與「喜劇」兩種，都在露天劇場演出。室內劇場最早則在羅馬時期出現。現在歐洲仍留有希臘、羅馬的古代劇場遺跡。</p>
+                                </div>
+                                
+                                <img src="images/01/content/1-3/pic56.jpg" alt="">
+
+                            </div>
+                             <!--內容區塊1 結束-->
+                             
+                             <!--內容區塊2-->
+                          <div class="content_section" style="background-image: url('images/01/content/1-3/pic76.jpg'); height: 208px;">                              
+                         
+                                 <div class="sub-section" style="width: 60%; margin-left:40%">
+                                    
+                                    <p>
+									<br>	我國現存最古老的劇本為宋金時期的南戲和雜劇，一般認為是由「講唱文學」演變而來。我們現在看到的「話劇」和「舞臺劇」，則是在十九世紀末期由日本和西方傳入中國。<br />    到了第六至第十世紀，西方戲劇因為內容和呈現的方式受到教會的反對，而被全面禁止。所以戲劇史上稱它做黑暗時期。但是有趣的是，後來戲劇的復興也是從教會開始，用來鼓勵信徒去教堂作禮拜。</p>
+                                </div>
+                               
+                            </div>
+                             <!--內容區塊2 結束-->
+                             
+                             <!--內容區塊3-->
+                            <div class="content_section" style="display: flex;background-image: url('images/01/content/1-3/pic62.jpg'); background-color:;height: 194px;">
+                               
+                              <div class="sub-section" style="width:70%;">
+                                  <br>
+                                   <p>接著「新古典主義」出現，講求作品必須合於理性的規範及道德觀念。但是物極必反，「新古典主義」不久就為「浪漫主義」所取代，他們主張自由、平等，並強調藝術家不必受人為規範的約束。<br />到了十九世紀末期，科學興起，大家又認為藝術也都要合於客觀的科學精神，於是興起了「自然主義」和「寫實主義」。</p>
+                                </div>
+                               
+                            </div>
+                            <!--內容區塊3 結束-->
+                            
+                            <!--內容區塊4-->
+                              <div class="content_section" style="background-image: url('images/01/content/1-3/pic63.jpg'); height: 173px;">
+                                <div class="sub-section" style="width: 70%; margin-left:30%">
+                                    <br>
+                                   <p>二十世紀科技的快速進步與智識的爆炸，東、西方文化的相互影響，無論在文學、繪畫、音樂、舞蹈、建築、戲劇方面，都先後泛起各式各樣的思潮和學說，戲劇運動中出現了如「象徵主義」、「表現主義」、「超現實主義」、「史詩劇場」、「荒謬劇場」等等。</p>
+                                </div>
+                                
+								</div><!--內容區塊4 結束-->
+                       </div><!--content3頁面 結束-->
+                       
+                       
+                       
+                       
+                       <!--content4頁面-->
+                        <div class="content display-none" id="content4">
+                         <div class="" style="background-color: #1e78ab;">
+                                <h1><strong>　類型</strong></h1>
+
+                            </div>                           
+                             
+                            
+                            <!--內容區塊1-->
+							<div class="content_section" style="display: flex; background-color: #BBF2FF; height: 95px;">
+                               
+                                 <p> 
+								 <br>俗語說「人生如戲，戲如人生」，也就是說，戲劇是反映我們生活的藝術。生活是多樣的，所以戲劇也是如此。在五花八門的戲劇分類中，比較常見的分類約有下列幾種：</p></div>
+                             <!--內容區塊1 結束-->
+                             
+                            <!--內容區塊2-->
+                          <div class="content_section" style="display: flex; background-color: #B2EEE4; height: 150px;">
+                                <div class="sub-section" style="width: 70%;">
+                                        <h3><br />
+                                   <img src="images/01/content/icon.gif" alt=""> 依源流或形式分：</h3>
+								   <ol>
+                                <li> 傳統戲曲 ─ 如京劇、越劇、豫劇、歌仔戲、傀儡戲、布袋戲等等。</li>
+                                <li> 現代戲劇 ─ 如話劇、舞臺劇、歌舞劇等。</li>
+                            </ol>
+                                </div>
+                                
+                                <div align="center" style="padding-top:25px"><img src="images/01/content/1-4/pic92.jpg" alt="" style="width:120%"></div>
+
+                            </div>
+                             <!--內容區塊2 結束-->
+                             
+                               <!--內容區塊3-->
+                          <div class="content_section" style="background-image: url('images/01/content/1-4/pic104.jpg'); background-repeat:no-repeat; background-color:#C5E8FC; height: 440px;">                              
+                         
+                                 <div class="sub-section" style="width:60%; margin-left:0%">
+                                    
+                                    <h3><br />
+                                   <img src="images/01/content/icon.gif" alt=""> 依內容性質分：</h3>
+								   <p>
+								   <ol>
+                                <li><strong>悲劇 （tragedy） ─ </strong>內容通常都是比較嚴肅，人物總是會經歷許多苦難，結局也多是離散、死亡等人生不如意的事件，不適宜十二、三歲以下的兒童觀賞。如《李爾王》、《羅密歐與茱麗葉》、《梁山伯與祝英台》。</li>
+                                <li><strong>喜劇（comedy） ─ </strong>內容輕鬆、活潑，常常含有諷刺的成分，引人發笑，並且多是皆大歡喜的結局。如《皆大歡喜》、《荷珠新配》、《守財奴》。</li>
+                                <li><strong>悲喜劇（tragic-comedy） ─ </strong>這種戲劇常是開始時嚴肅，或充滿苦難，但是會苦盡甘來，最後也是以皆大歡喜收場。如許多以「私定終身後花園、落難公子中狀元」為題材的戲曲。</li>
+                                <li><strong>鬧劇（farce） ─ </strong>專門逗笑，常常沒有什麼內容。如勞來哈臺的戲。</li>
+                            </ol>
+
+    
+                                </div>
+                               
+                            </div>
+                             <!--內容區塊3 結束-->
+                             
+                             <!--內容區塊4-->
+                          <div class="content_section" style="display: flex;background-image: url('images/01/content/1-4/pic93.jpg'); background-color:;height: 239px;">
+                               
+                              <div class="sub-section" style="width:%;">
+                                  <br/><p>
+                                   在以上這些類型中，都可以就題材與呈現方式，再分成長劇和短劇、多幕劇和獨幕劇、成人劇、青少年劇和兒童劇等等。</p>
+                                </div>
+                               
+                            </div>
+                            <!--內容區塊4 結束-->
+                        </div><!--content4頁面 結束-->
+                        
+                        
+                        
+                        <!--content5頁面-->
+                        <div class="content display-none" id="content5">
+                            <div class="" style="background-color: #1e78ab;">
+                                <h1><strong>　要素</strong></h1>
+                            </div>
+                            <div class="">
+                               
+                            </div>
+                            
+                            <!--內容區塊1-->
+                          <div class="content_section" style="background-color: #BBF2FF; height: 160px;">
+						  <p><br>一齣戲通常都有一個經劇作家巧妙安排的故事。劇作家把這種有起、承、轉、合的故事稱為「情節」（plot）。亞里斯多德（Aristotle）說：「情節是悲劇的靈魂」，其實情節是所有成功戲劇作品的靈魂。</p>
+                                 <p>在戲劇的情節或故事中必然有「人物」，並通過人物的「語言」和「行動」來傳達劇作家的思想。現在我們來簡單地介紹一下這些構成戲劇的要素：</p>
+  
+                            </div>
+                             <!--內容區塊1 結束-->
+                             
+                             <!--內容區塊2-->
+                          <div class="content_section" style="background-image: url('images/01/content/1-5/pic94.jpg'); height: 130px;">
+                               
+							    <h3><img src="images/01/content/icon.gif" alt=""> 人物（character）</h3>
+                                <p style="width: 370px;">    故事中的人物不一定全是人類，如《武松打虎》中有武松和老虎；《龜兔賽跑》中有烏龜和兔子；《美女與野獸》中有美女、人變的野獸、茶壺、茶杯等。我們稱他們為「人物」，因為他們都具有人類的思想、言語、行動等特質。</p>
+								</div>
+                            
+                             <!--內容區塊2 結束-->
+                             
+                             <!--內容區塊3-->
+                            <div class="content_section" style="background-image: url('images/01/content/1-5/pic98.jpg');display: flex; background-color: #aeedf8; height:201px">
+                              <div class="sub-section" style="width: 50%; margin-left:25%">
+							 
+							  <h3><img src="images/01/content/icon.gif" alt=""> 語言（language）</h3>
+                               <p>								在戲劇中「語言」通常指對白、歌詞等文字語言。但是現在談劇場時，大家把身體動作稱為「肢體語言」。 </p>
+							  <h3><img src="images/01/content/icon.gif" alt=""> 思想（thought）</h3>	
+							   <p>    我們在寫作和演出一齣戲時，一定想告訴讀者和觀眾我們心裡想的、或感受到的東西，也就是所謂的「內容」。</p>
+                                </div>
+                               
+                            </div>
+                            <!--內容區塊3 結束-->
+                            
+                             <!--內容區塊4-->
+                          <div class="content_section" style="background-image: url('images/01/content/1-5/pic96.jpg'); height: 245px;">
+						  
+						     <h3><img src="images/01/content/icon.gif" alt=""> 行動（action）</h3>
+                               
+                                <p style="width: 340px;">    也有人叫它為「動作」。不過action一字在戲劇中，可以指整個情節的發展和演員的動作。簡單地說，戲劇必須經由語言和動作才能呈現劇作家和導演等人的思想、感情。<br />試想，如果一個人什麼都不說、不做，就沒有故事或「情節」了。例如：假使武松不去打老虎，只是坐在酒店裡一動不動，也不說話，就沒有戲可看了。烏龜和兔子如果沒有舉行賽跑，也就沒有這個故事了。行動是賦予戲劇生命的要素之一。人物在行動之前，必定有促使他行動的原因或力量。這就是「動機」。  </p>
+								</div>
+                            
+                             <!--內容區塊4 結束-->
+                             
+                              <!--內容區塊5-->
+                          <div class="content_section" style="background-image: url('images/01/content/1-5/pic99.jpg'); height: 179px;">
+						  
+						     <h3><img src="images/01/content/icon.gif" alt=""> 其他</h3>   
+                                <p style="width: 320px;">    一齣戲的成功與失敗除了人物的呈現、行動的安排、動機的掌握是否得當以外，表達的內容是否豐富、有趣？是否有深度、有思想？文詞是否傳神、美麗？都有關係。再就演出的角度來看，導演對劇本的詮釋、演員的表演、佈景、燈光、音樂／音效等相關藝術的配合是否成功？……都是構成戲劇和決定戲劇成敗的因素。</p>
+								</div>
+                            
+                             <!--內容區塊5 結束-->
+                        </div><!--content5頁面 結束-->
+                        
+                        
+                         <!--content6頁面-->
+                        <div class="content display-none" id="content6">
+<div class="" style="background-color: #1e78ab;">
+                                <h1><strong>　發展</strong></h1>
+
+                          </div>
+                          
+                             <p style="width:300px; margin-left:45%" align="right"><img src="images/01/content/01.gif" alt=""><a href="#" id="link_03_1" onclick="showContent('content6')">臺灣戲劇發展</a>　　　<img src="images/01/content/01.gif" alt=""><a href="#" id="link_03_1" onclick="showContent('content7')">臺灣的兒童劇場發展</a></p>
+                           
+                            
+                            <!--內容區塊1-->
+							<div class="content_section" style="display: flex; background-image: url('images/01/content/1-3/1/p1-3_00.png'); background-size:100%; height:90px" >
+                                                   
+                            </div>
+                             <!--內容區塊1 結束-->
+                             
+                             <!--內容區塊2-->
+                         <div class="content_section" style="display: flex;background-image: url('images/01/content/1-3/1/pic80.jpg'); background-color:;height: 120px;">
+                               
+                              <div class="sub-section" style="width:70%; margin-top:5px">
+                                  
+                                   <p>臺灣早期的許多地方戲曲，原本由大陸移民帶來，包括京劇、南管戲、北管戲、潮州戲、亂彈戲、四平戲、高甲戲、梨園戲、皮影戲、傀儡戲、布袋戲等等。它們在臺灣流傳發展，因方言的改變或吸收其它戲種的形式，漸漸形成臺灣地方的特色。</p>
+                              </div>
+                               
+                            </div>
+                             <!--內容區塊2 結束-->
+                             
+                             <!--內容區塊3-->
+                             <div class="content_section" style="background-image: url('images/01/content/1-3/1/pic81.jpg'); height: 125px;">                              
+                         
+                                 <div class="sub-section" style="width: 60%; margin-left:40% ;margin-top:5px">
+                                   
+                                    <p>到了 1920 年代，臺灣才興起本土劇種 ─ 歌仔戲，基本曲調仍來自閩南。又因為受到日本新派演劇的影響，出現了「新劇」，是一種寫實的表演方式，在內容上有宣揚日本軍國主義色彩的「皇民化劇」，以及反對日本統治的民族主義作品。</p>
+                                </div>
+                               
+                          </div>
+                            <!--內容區塊3 結束-->
+                            
+                            <!--內容區塊4-->
+                             <div class="content_section" style="display: flex;background-image: url('images/01/content/1-3/1/pic82.jpg'); background-color:;height: 117px;">
+                               
+                              <div class="sub-section" style="width:60%; margin-top:5px">
+                                 
+                                   <p>1949 年國民政府來臺，因社會環境使然，戲劇多成為服務政治的「反共抗俄劇」。1956 年～1975 年，李曼瑰女士大力倡導「小劇場運動」；接著，歐美思潮隨著歸國留學生進入臺灣社會，劇本創作的題材與形式就更加豐富了。</p>
+                              </div>
+                               
+                            </div><!--內容區塊4 結束-->
+                            
+                            <!--內容區塊5-->
+							<div class="content_section" style="display: flex; height:120px; background-color:#FFF;" >
+                            <p><br>
+                            80 年代以來，臺灣開始出現有別於傳統話劇的「實驗戲劇」，開始使用「舞臺劇」一辭。80 年代後期，許多小劇場投入政治與社會運動中，到了 90 年代則脫去政治色彩，追求藝術形式的創新。稍後，表演工作坊、屏風表演班、果陀劇團等努力開拓商業劇場的形式。此外，傳統戲曲與現代戲劇也相互吸收養分，形成今天臺灣劇場豐富的面貌。</p>
+                                                   
+                            </div>
+                             <!--內容區塊5 結束-->
+                             
+                              <!--內容區塊6-->
+							<div class="content_section" style="background-image: url('images/01/content/1-3/1/pic83.jpg'); height:311px; background-position:center">                   
+                           
+                                                   
+                            </div>
+                             <!--內容區塊6 結束-->
+                        </div><!--content6頁面 結束-->
+						
+
+						
+						
+						
+						<!--content7頁面-->
+                        <div class="content display-none" id="content7">
+						<div class="" style="background-color: #1e78ab;">
+                                <h1><strong>　發展</strong></h1>
+
+                          </div>
+                          
+                             <p style="width:300px; margin-left:45%" align="right"><img src="images/01/content/01.gif" alt=""><a href="#" id="link_03_1" onclick="showContent('content6')">臺灣戲劇發展</a>　　　<img src="images/01/content/01.gif" alt=""><a href="#" id="link_03_1" onclick="showContent('content7')">臺灣的兒童劇場發展</a></p>
+                           
+                            
+                            <!--內容區塊1-->
+							<div class="content_section" style="display: flex;background-color:#DEFFD6;height: 225px;">
+                               
+                              <div class="sub-section" style="width:75%; margin-top:5px">
+                                  
+                                   <p>臺灣第一次兒童劇公演是在 1948 年 5 月，由臺灣省教育會假臺北市中山堂主辦「兒童話劇試演會」。李曼瑰女士除了推動小劇場運動外，並且提倡「兒童劇」。於 1968 年由臺北市教育局及中國戲劇藝術中心，共同舉辦「臺北市國中國小教師戲劇、編、導、演研習會」，培養兒童劇的師資。1969 年成立「兒童戲劇推行委員會」及兒童教育劇團。1970 年中視開播兒童電視劇。<br />
+								   臺北市於 1977 年起舉辦「兒童劇展」， 1979 年高雄市也舉辦類似劇展，都是兒童演戲給兒童看的作法，效果並不理想，因此早已停辦了。</p>
+                              </div>
+                              
+                              <img src="images/01/content/1-3/2/pic12.jpg" alt="" style="margin-left:10px; margin-top:10px">
+                               
+                            </div>
+                             <!--內容區塊1 結束-->
+                             
+                             <!--內容區塊2-->
+                          <div class="content_section" style="display: flex; background-color:#D3F6F7;height: 153px;">
+                               
+                              <div class="sub-section" style="width:70%; margin-top:5px">
+                                 <p>
+								 1980  年開始，更多劇場界人士開始參與兒童劇，並朝向成人演戲給兒童看的專業方向發展。1986 年成立的「魔奇兒童劇團」，是第一個向專業發展的兒童劇團。接著許多類似的兒童劇團紛紛成立，有九歌、杯子、鞋子、一元布偶、媽咪、紙風車等等，每個團體都勇於實驗與創作，開發年輕的觀眾群，使兒童劇場走上較成熟的路線。</p>
+                              </div>
+                             
+                              <img src="images/01/content/1-3/2/pic13.jpg" alt="" style="margin-left:10px; margin-top:10px; width:33%; hight=33%">
+                                
+                            </div>
+                             <!--內容區塊2 結束-->
+                             
+                             <!--內容區塊3-->
+                            <div class="content_section" style="background-image: url('images/01/content/1-3/2/pic84.jpg'); height:368px; background-position:center">                   
+                                                   
+                            </div> 
+                            <!--內容區塊3 結束-->
+                        </div><!--content7頁面 結束-->
+                        
+                        
+						
+                    </div>
+                    <div class="nav-section" style="width: 614px; height: 82px; background-image: url('images/01/nav/introduce_07.gif'); background-repeat: no-repeat;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/content.js"></script>
+    <script type="text/javascript">
+        window.onload=function(){
+            // 按照頁面需求更換
+            const mainSection = document.getElementById("main-section")
+            mainSection.style.backgroundImage = "url('" + mainBackground + "')";
+        }
+    </script>
+</body>
+</html>
