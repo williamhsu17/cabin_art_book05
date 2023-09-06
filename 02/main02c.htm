@@ -194,14 +194,120 @@ function openIT8(theURL,W,H, wname) {
                 <tr> 
                   <td>木管樂器又依其吹嘴構造分為無簧片、單簧片與雙簧片三種，分別是：</td>
                 </tr>
-                <tr> 
-                  <td> <div align="left"> 
-                      <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="450" height="250">
-                        <param name="movie" value="images/main2c-10.swf">
-                        <param name="quality" value="high">
-                        <embed src="images/main2c-10.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="450" height="250"></embed></object>
-                    </div></td>
-                </tr>
+				<tr>
+					<td align="left">
+					  <div class="ins_play-section" style="width: 540px; height: 250px; display: flex;">
+						<style>
+						  .display-none {
+							display: none;
+						  }
+						  .content, .content_1 {
+							width: 528px;
+							display: flex;
+						  }
+						  .ins_section {
+						  }
+						  .content_section {
+							width: 264px;
+							text-align: center;
+						  }
+						  .video_section {
+							width: 264px;
+							display: flex;
+						  }
+						  .video_section p {
+							margin-top: 0px;
+							margin-bottom: 0px;
+							width: 230px;
+							text-align: center;
+							background-color: #2aa1a1;
+							color: white;
+							font-size: 14px;
+							padding-top: 4px;
+							padding-bottom: 4px;
+						  }
+						  .video_section a {
+							width:34px;
+							height: 28px;
+							background-color: #1b808f;
+						  }
+						  .video_section a img {
+							margin-left: 4px;
+						  }
+						  .side_button_group {
+							width: 200px;
+						  }
+						  .image_button {
+							display: block;
+							margin-top: 10px;
+							width: 200px;
+							height: 40px;
+							text-decoration: none;
+							font-size: 14px;
+							text-align: left;
+						  }          
+						</style>
+						<div class="side_button_group" style="margin: 0 auto;">
+						  <a href="#" class="image_button" id="link_01" onclick="showContent('content1')">長笛（Flute，又稱横笛）</a>
+						  <a href="#" class="image_button" id="link_02" onclick="showContent('content2')">雙簧管（Oboe）</a>
+						  <a href="#" class="image_button" id="link_03" onclick="showContent('content3')">單簧管（Clarinet）</a>
+						  <a href="#" class="image_button" id="link_04" onclick="showContent('content4')">低音管（Bassoon）</a>
+						</div>
+						<div class="content" id="content1">
+						  <div class="ins_section">
+							<img src="images/2c/main2c-10[1].png" alt="">
+							<div class="video_section">
+							  <p>長笛（Flute，又稱横笛）</p>
+							  <a href="http://" class="video_link"><img src="../images/001/1-2/main02-2[2].png" alt=""></a>
+							</div>
+						  </div>
+						  <div class="content_section">
+							<p>長笛（Flute，又稱横笛）</p>
+							<p>木管樂器，沒有吹嘴簧片，直接經由向吹口邊緣吹氣而發聲，在十九世紀前原為木質材料，十九世紀後改為金屬材質，為木管樂器高音域之成員。</p>
+						  </div>
+						</div>
+						<div class="display-none content" id="content2" style="display: none;">
+						  <div class="ins_section">
+							<img src="images/2c/main2c-10[6].png" alt="">
+							<div class="video_section" style="width: 256px;">
+							  <p style="width: 256px;">雙簧管（Oboe）</p>
+							  
+							</div>
+						  </div>
+						  <div class="content_section">
+							<p>雙簧管（Oboe）</p>
+							<p>使用雙簧片吹嘴吹奏的木管樂器，嗩呐（Sonar）是其祖先，擁有相當高且嘹亮的音域，自十八世紀起常為樂團中主奏的樂器。</p>
+						  </div>
+						</div>
+						<div class="display-none content" id="content3" style="display: none;">
+						  <div class="ins_section">
+							<img src="images/2c/main2c-10[7].png" alt="">
+							<div class="video_section" style="width: 256px;">
+							  <p style="width: 256px;">單簧管（Clarinet）</p>
+							</div>
+						  </div>
+						  <div class="content_section">
+							<p>單簧管（Clarinet）</p>
+							<p>因是直著吹奏，故又名豎笛，亦被稱為黑管紀。以單簧片吹嘴吹奏的木管樂器，與雙簧管為近親關係，音域較雙簧管廣，且為爵士樂主奏樂器之一。</p>
+						  </div>
+						</div>
+						<div class="display-none content" id="content4" style="display: none;">
+						  <div class="ins_section">
+							<img src="images/2c/main2c-10[8].png" alt="">
+							<div class="video_section">
+							  <p>低音管（Bassoon）</p>
+							  <a href="http://" class="video_link"><img src="../images/001/1-2/main02-2[2].png" alt=""></a>
+							</div>
+						  </div>
+						  <div class="content_section">
+							<p>低音管（Bassoon）</p>
+							<p>根據其譯音又稱巴松管。使用雙簧片吹嘴吹奏的木管樂器，是木管樂器中音域最低、體型最大的一員，自十七世紀後半葉就是樂團主要的成員之一。</p>
+						  </div>
+						</div>
+						<script src="../js/content.js"></script>
+					  </div>
+					</td>
+				  </tr>
                 <tr> 
                   <td>&nbsp;</td>
                 </tr>
@@ -212,23 +318,96 @@ function openIT8(theURL,W,H, wname) {
                 <tr> 
                   <td>銅管樂器為黃銅或銀製樂器，均有杯狀或漏斗狀之吹嘴，吹奏者透過吹嘴吹氣振動而發聲，其成員包括：</td>
                 </tr>
-                <tr> 
-                  <td><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="450" height="250">
-                      <param name="movie" value="images/main2c-20.swf">
-                      <param name="quality" value="high">
-                      <embed src="images/main2c-20.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="450" height="250"></embed></object></td>
-                </tr>
+				<tr>
+					<td align="left">
+						<div class="ins_play-section" style="width: 540px; height: 250px; display: flex;">
+						<div class="side_button_group" style="margin: 0 auto;">
+							<a href="#" class="image_button" id="link_05" onclick="showContent_1('content5')">小號（Trumpet，又稱小喇叭）</a>
+							<a href="#" class="image_button" id="link_06" onclick="showContent_1('content6')">法國號（Frenchhorn）</a>
+							<a href="#" class="image_button" id="link_07" onclick="showContent_1('content7')">長號（Trombone）</a>
+							<a href="#" class="image_button" id="link_08" onclick="showContent_1('content8')">低音號（Tuba）</a>
+						</div>
+						<div class="content_1" id="content5">
+							<div class="ins_section">
+							<img src="images/2c/main2c-20[1].png" alt="">
+							<div class="video_section">
+								<p>小號（Trumpet，又稱小喇叭）</p>
+								<a href="http://" class="video_link"><img src="../images/001/1-2/main02-2[2].png" alt=""></a>
+							</div>
+							</div>
+							<div class="content_section">
+							<p>小號（Trumpet，又稱小喇叭）</p>
+							<p>銅管家族音域最高的成員，被廣泛地應用在管弦樂團、管樂團、爵士樂團與摇滾樂團中。</p>
+							</div>
+						</div>
+						<div class="content_1 display-none" id="content6" style="display: none;">
+							<div class="ins_section">
+							<img src="images/2c/main2c-20[6].png" alt="">
+							<div class="video_section" style="width: 256px;">
+								<p style="width: 256px;">法國號（Frenchhorn）</p>
+								
+							</div>
+							</div>
+							<div class="content_section">
+							<p>法國號（Frenchhorn）</p>
+							<p>屬於銅管家族中音域最廣的成員，其管子捲繞成環型狀，為管弦樂團最早之銅管成員。</p>
+							</div>
+						</div>
+						<div class="content_1 display-none" id="content7" style="display: none;">
+							<div class="ins_section">
+							<img src="images/2c/main2c-20[7].png" alt="">
+							<div class="video_section" style="width: 256px;">
+								<p style="width: 256px;">長號（Trombone）</p>
+							</div>
+							</div>
+							<div class="content_section">
+							<p>長號（Trombone）</p>
+							<p>因其有一可回滑動之長管，故又稱伸縮喇叭，唯一不使用按鍵活塞而使用滑管吹奏之銅管樂器，音域屬於中低範圍，自十九世紀後才被納入管弦樂團的編制中。</p>
+							</div>
+						</div>
+						<div class="content_1 display-none" id="content8" style="display: none;">
+							<div class="ins_section">
+							<img src="images/2c/main2c-20[8].png" alt="">
+							<div class="video_section">
+								<p>低音號（Tuba）</p>
+								<a href="http://" class="video_link"><img src="../images/001/1-2/main02-2[2].png" alt=""></a>
+							</div>
+							</div>
+							<div class="content_section">
+							<p>低音號（Tuba）</p>
+							<p>銅管家族最低、最大、最重的一員，自十九世紀後方才納入管絃樂團編制中，出現在四管編制的交響樂中（例如四把小號四把法國號配對一把低音號）。</p>
+							</div>
+						</div>
+						<script>
+							function showContent(contentId) {
+								// Hide all content divs first
+								const contentDivs = document.querySelectorAll('.content');
+								contentDivs.forEach(
+									div => {div.style.display = 'none';}
+								);
+
+								// Show the selected content
+								document.getElementById(contentId).style.display = 'flex';
+							}
+							function showContent_1(contentId) {
+								// Hide all content divs first
+								const contentDivs = document.querySelectorAll('.content_1');
+								contentDivs.forEach(
+									div => {div.style.display = 'none';}
+								);
+
+								// Show the selected content
+								document.getElementById(contentId).style.display = 'flex';
+							}
+						</script>
+						</div>
+					</td>
+				</tr>
               </table></td>
           </tr>
         </table>
       </div></td>
   </tr>
 </table>
-<div id="Layer1" style="position:absolute; left:230px; top:14px; width:298px; height:54px; z-index:1"> 
-  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="280" height="45">
-    <param name="movie" value="images/secomd-btn02.swf">
-    <param name="quality" value="high">
-    <embed src="images/secomd-btn02.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="280" height="45"></embed></object>
-</div>
 </body>
 </html>

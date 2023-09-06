@@ -139,12 +139,132 @@ function openIT5(theURL,W,H, wname) {
         </p>
       </div></td>
   </tr>
+  <tr>
+    <td align="center">
+      <div class="ins_play-section" style="width: 450px; height: 250px; margin: 0 auto; display: flex;">
+        <style>
+          .display-none {
+            display: none;
+          }
+          .content {
+            width: 528px;
+            
+          }
+          .ins_section {
+          }
+          .content_section {
+            width: 264px;
+            text-align: center;
+          }
+          .video_section {
+            width: 264px;
+            display: flex;
+          }
+          .video_section p {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            width: 230px;
+            text-align: center;
+            background-color: #2aa1a1;
+            color: white;
+            font-size: 14px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+          }
+          .video_section a {
+            width:34px;
+            height: 28px;
+            background-color: #1b808f;
+          }
+          .video_section a img {
+            margin-left: 4px;
+          }
+          .image_button {
+            display: block;
+            margin-top: 10px;
+            width: 140px;
+            height: 40px;
+            text-decoration: none;
+            font-size: 16px;
+            text-align: left;
+          }          
+        </style>
+        <div class="side_button_group" style="margin: 0 auto;">
+          <a href="#" class="image_button" id="link_01" onclick="showContent('content1')">小提琴（Violin）</a>
+          <a href="#" class="image_button" id="link_02" onclick="showContent('content2')">中提琴（Viola）</a>
+          <a href="#" class="image_button" id="link_03" onclick="showContent('content3')">大提琴（Violoncello；Cello）</a>
+          <a href="#" class="image_button" id="link_04" onclick="showContent('content4')">低音大提琴（Double bass）</a>
+		  <a href="#" class="image_button" id="link_05" onclick="showContent('content5')">弦樂四重奏</a>
+        </div>
+        <div class="content" id="content1">
+          <div class="ins_section">
+            <img src="images/2b/violin01[1].png" alt="">
+            <div class="video_section">
+              <p>小提琴（Violin）</p>
+              <a href="http://" class="video_link"><img src="../images/001/1-2/main02-2[2].png" alt=""></a>
+            </div>
+          </div>
+          <div class="content_section">
+            <p>小提琴（Violin）</p>
+            <p>弓弦樂器中拥有最高音域的成員，最早出現於十五世紀教堂的壁畫中，通常其在樂團的編制中分為第一小提琴與第二小提琴。</p>
+          </div>
+        </div>
+        <div class="content display-none" id="content2">
+          <div class="ins_section">
+            <img src="images/2b/violin01[6].png" alt="">
+            <div class="video_section">
+              <p>中提琴（Viola）</p>
+              <a href="http://" class="video_link"><img src="../images/001/1-2/main02-2[2].png" alt=""></a>
+            </div>
+          </div>
+          <div class="content_section">
+            <p>中提琴（Viola）</p>
+            <p>弓弦樂器中拥有比小提琴次高音域的成員，十九世紀以前在樂團通常擔任伴奏的角色自，十九世紀後開始受到作曲家的重视，為其寫作的獨奏作品漸漸增加。</p>
+          </div>
+        </div>
+        <div class="content display-none" id="content3">
+          <div class="ins_section">
+            <img src="images/2b/violin01[7].png" alt="">
+            <div class="video_section">
+              <p>大提琴（Violoncello；Cello）</p>
+			  <a href="http://" class="video_link"><img src="../images/001/1-2/main02-2[2].png" alt=""></a>
+            </div>
+          </div>
+          <div class="content_section">
+            <p>大提琴（Violoncello；Cello）</p>
+            <p>弓弦樂器中屬於中低音域的家族成員，必須坐著方能拉奏，為樂團中聲音基礎的骨幹，自十八世紀開始就有許多作曲家為其寫作樂曲。</p>
+          </div>
+        </div>
+        <div class="content display-none" id="content4">
+          <div class="ins_section">
+            <img src="images/2b/violin01[8].png" alt="">
+            <div class="video_section">
+              <p>低音大提琴（Double bass）</p>
+              <a href="http://" class="video_link"><img src="../images/001/1-2/main02-2[2].png" alt=""></a>
+            </div>
+          </div>
+          <div class="content_section">
+            <p>低音大提琴（Double bass）</p>
+            <p>家族成員中樂器音域最低、體型最大的一位，必須直立方能拉奏，經過長時間的改良，至十九世紀方才確定其樂器規格與演奏方式，一般分為法式與德式兩種。</p>
+          </div>
+        </div>
+		<div class="content display-none" id="content5">
+			<div class="ins_section">
+			  <img src="images/2b/violin01[9].png" alt="">
+			  <div class="video_section">
+				<p>弦樂四重奏</p>
+				<a href="http://" class="video_link"><img src="../images/001/1-2/main02-2[2].png" alt=""></a>
+			  </div>
+			</div>
+			<div class="content_section">
+			  <p>弦樂四重奏</p>
+			  <p>家族成員中樂器音域最低、體型最大的一位，必須直立方能拉奏，經過長時間的改良，至十九世紀方才確定其樂器規格與演奏方式，一般分為法式與德式兩種。</p>
+			</div>
+		  </div>
+        <script src="../js/content.js"></script>
+      </div>
+    </td>
+  </tr>
 </table>
-<div id="Layer1" style="position:absolute; left:230px; top:14px; width:298px; height:54px; z-index:1"> 
-  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="280" height="45">
-    <param name="movie" value="images/secomd-btn02.swf">
-    <param name="quality" value="high">
-    <embed src="images/secomd-btn02.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="280" height="45"></embed></object>
-</div>
 </body>
 </html>

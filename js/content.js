@@ -8,6 +8,16 @@ function showContent(contentId) {
     // Show the selected content
     document.getElementById(contentId).style.display = 'block';
 }
+function showContent_1(contentId) {
+    // Hide all content divs first
+     const contentDivs = document.querySelectorAll('.content_1');
+    contentDivs.forEach(
+        div => {div.style.display = 'none';}
+    );
+
+    // Show the selected content
+    document.getElementById(contentId).style.display = 'block';
+}
 function changeImage(newSrc, displayField) {
     console.log('change image')
     const imageElement = document.getElementById(displayField);
