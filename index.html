@@ -1,89 +1,168 @@
-<!DOCTYPE html>
-<html lang="zh-Hant-TW">
+<!doctype html>
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>戲劇欣賞系列-兒童劇</title>
+<meta charset="UTF-8" />
 
-    <script src="js/htmlinclude.js"></script>
-    <include src="partial/header.html"></include>
-    <link rel="stylesheet" href="css/introductory.css">
-    <link rel="stylesheet" href="css/image-switch-button.css">
-    <script>
-        // 按照頁面需求更換
-        const thisPage = '01_introductory';
-        const thisSide = 'side_default';
-
-        const mainBackground = 'images/01_history/content/m_bg.jpg';
-        const navButtonGroupImage = 'images/01_history/top01_01.jpg';
-    </script>
-    <style>
-        .display-none {
-            display: none;
-        }
-        .content {
-            width: 569px;
-            margin-left: 52px;
-            margin-right: 63px;
-            margin-bottom: 10px;
-            /* border: 1px solid #aaa; */
-            background-color: transparent;
-            color: #363637;
-            font-size: smaller;
-        }
-        .content-title-image {
-            width: 100%;
-        }
-        .content-body {
-            display: flex;
-        }
-        .content-body p {
-            margin-left: 2px;
-        }
-        .content-body img {
-            width: 100%;
-        }
-    body {
-	background-color: #FFF86F;
-}
-    </style>
+<title>古典音樂欣賞器樂篇</title>
 </head>
-<body>
+<body bgcolor="D7D7D7" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+  <table width="100%" height="768" border="0" cellpadding="0" cellspacing="0">
+    <tr> 
+      <td valign="top" background="images/bg.jpg">
+        <table width="100%" height="450" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td>&nbsp;</td>
+            <td width="765"><table width="100%" height="450" border="0" cellpadding="0" cellspacing="0">
+                <tr> 
+                  <td width="4" rowspan="2"><img src="images/01.jpg" width="4" height="450"></td>
+                  <td height="446">
+                    <style>
+                      .display-none {
+                        display: none;
+                      }
+                      .title_block {
+                        width: 765px;
+                        height: 93px;
+                        background-image: url('images/index/index_title.jpg');
+                        background-size: cover;
+                      }
+                      .switch_block {
+                        width: 765px;
+                        height: 195px;
+                      }
+                      .switch_block .content {
+                        width: 100%;
+                        height: 100%;
+                        background-size: cover;
+                        position: relative;
+                      }
+                      .switch_block .content a {
+                        position: absolute;
+                        text-decoration: none;
+                        font-size: 0px;
+                      }
+                      .switcher {
+                        width: 27px; 
+                        height: 196px;
+                        top: 0px;
+                      }
+                      .chapter_link {
 
-<div><img src="images/index.jpg" alt="" width="860">
-
-
-<div style="position:relative; left50px;top:-500px">
-<table width="90%" border="0" cellpadding="2">
-      <tr>
-        <th scope="col" valign="top" ><a href="https://www.arte.gov.tw/"><img src="images/logo.jpg" width="250" /></a></th>
-        <th scope="col"><a href="01.html"><img src="images/index-btn1.png" height="100" /></a></th>
-        <th scope="col"><a href="#"><img src="images/index-btn2.png" height="100" /></a></th>
-       <th scope="col"><a href="#"><img src="images/index-btn3.png" height="100" /></a></th>
-
-      </tr>
-    </table>
-
-</div>
-
-
-<div style="position:relative; left50px;top:-250px">
-<table width="90%" border="0" cellpadding="2">
-      <tr>
-        
-        <th scope="col" width="100px"></th>
-        <th scope="col"><a href="#"><img src="images/index-btn4.png" height="100" /></a></th>
-       <th scope="col"><a href="#"><img src="images/index-btn5.png" height="100" /></a></th>
-        <th scope="col"><a href="#"><img src="images/index-btn6.png" height="100" /></a></th>
-        <th scope="col"><a href="#"><img src="images/index-btn7.png" height="100" /></a></th>
-      </tr>
-    </table>
-
-</div>
-
-</div>
-
-
-
+                      }
+                      .bottom_block {
+                        width: 765px;
+                        height: 162px;
+                        background-image: url('images/index/index_bottom.jpg');
+                        background-size: cover;
+                        position: relative;
+                      }
+                      .bottom_block img {
+                        position: absolute;
+                        right: 0px;
+                        bottom: 0px;
+                      }
+                    </style>
+                    <div class="title_block"></div>
+                    <div class="switch_block">
+                      <div class="content" id="content0" style="background-image: url('images/index/index_0.jpg');">
+                        <a href="#" class="switcher" style="right: 164px;" onclick="showContent('content1')"></a>
+                      </div>
+                      <div class="content display-none" id="content1" style="background-image: url('images/index/index_1.png');">
+                        <a href="00/00.htm" class="chapter_link" style="top: 145px; right: 185px; width: 128px; height: 18px;"></a>
+                        <a href="#" class="switcher" style="left: 0px;" onclick="showContent('content1')"></a>
+                        <a href="#" class="switcher" style="right: 135px;" onclick="showContent('content2')"></a>
+                        <a href="#" class="switcher" style="right: 108px;" onclick="showContent('content3')"></a>
+                        <a href="#" class="switcher" style="right: 81px;" onclick="showContent('content4')"></a>
+                        <a href="#" class="switcher" style="right: 54px;" onclick="showContent('content5')"></a>
+                        <a href="#" class="switcher" style="right: 27px;" onclick="showContent('content6')"></a>
+                        <a href="#" class="switcher" style="right: 0px;" onclick="showContent('content7')"></a>
+                      </div>
+                      <div class="content display-none" id="content2" style="background-image: url('images/index/index_2.png');">
+                        <a href="01/01_1.htm" class="chapter_link" style="top: 133px; right: 185px; width: 135px; height: 18px;"></a>
+                        <a href="#" class="switcher" style="left: 0px;" onclick="showContent('content1')"></a>
+                        <a href="#" class="switcher" style="left: 27px;" onclick="showContent('content2')"></a>
+                        <a href="#" class="switcher" style="right: 108px;" onclick="showContent('content3')"></a>
+                        <a href="#" class="switcher" style="right: 81px;" onclick="showContent('content4')"></a>
+                        <a href="#" class="switcher" style="right: 54px;" onclick="showContent('content5')"></a>
+                        <a href="#" class="switcher" style="right: 27px;" onclick="showContent('content6')"></a>
+                        <a href="#" class="switcher" style="right: 0px;" onclick="showContent('content7')"></a>
+                      </div>
+                      <div class="content display-none" id="content3" style="background-image: url('images/index/index_3.png');">
+                        <a href="02/02_1.htm" class="chapter_link" style="top: 145px; right: 145px; width: 128px; height: 18px;"></a>
+                        <a href="#" class="switcher" style="left: 0px;" onclick="showContent('content1')"></a>
+                        <a href="#" class="switcher" style="left: 27px;" onclick="showContent('content2')"></a>
+                        <a href="#" class="switcher" style="left: 54px;" onclick="showContent('content3')"></a>
+                        <a href="#" class="switcher" style="right: 81px;" onclick="showContent('content4')"></a>
+                        <a href="#" class="switcher" style="right: 54px;" onclick="showContent('content5')"></a>
+                        <a href="#" class="switcher" style="right: 27px;" onclick="showContent('content6')"></a>
+                        <a href="#" class="switcher" style="right: 0px;" onclick="showContent('content7')"></a>
+                      </div>
+                      <div class="content display-none" id="content4" style="background-image: url('images/index/index_4.png');">
+                        <a href="03/03_1.htm" class="chapter_link" style="top: 140px; right: 105px; width: 128px; height: 18px;"></a>
+                        <a href="#" class="switcher" style="left: 0px;" onclick="showContent('content1')"></a>
+                        <a href="#" class="switcher" style="left: 27px;" onclick="showContent('content2')"></a>
+                        <a href="#" class="switcher" style="left: 54px;" onclick="showContent('content3')"></a>
+                        <a href="#" class="switcher" style="left: 81px;" onclick="showContent('content4')"></a>
+                        <a href="#" class="switcher" style="right: 54px;" onclick="showContent('content5')"></a>
+                        <a href="#" class="switcher" style="right: 27px;" onclick="showContent('content6')"></a>
+                        <a href="#" class="switcher" style="right: 0px;" onclick="showContent('content7')"></a>
+                      </div>
+                      <div class="content display-none" id="content5" style="background-image: url('images/index/index_5.png');">
+                        <a href="04/04_1.htm" class="chapter_link" style="top: 145px; right: 75px; width: 200px; height: 18px;"></a>
+                        <a href="#" class="switcher" style="left: 0px;" onclick="showContent('content1')"></a>
+                        <a href="#" class="switcher" style="left: 27px;" onclick="showContent('content2')"></a>
+                        <a href="#" class="switcher" style="left: 54px;" onclick="showContent('content3')"></a>
+                        <a href="#" class="switcher" style="left: 81px;" onclick="showContent('content4')"></a>
+                        <a href="#" class="switcher" style="left: 108px;" onclick="showContent('content5')"></a>
+                        <a href="#" class="switcher" style="right: 27px;" onclick="showContent('content6')"></a>
+                        <a href="#" class="switcher" style="right: 0px;" onclick="showContent('content7')"></a>
+                      </div>
+                      <div class="content display-none" id="content6" style="background-image: url('images/index/index_6.png');">
+                        <a href="05/05_1.htm" class="chapter_link" style="top: 146px; right: 45px; width: 128px; height: 18px;"></a>
+                        <a href="#" class="switcher" style="left: 0px;" onclick="showContent('content1')"></a>
+                        <a href="#" class="switcher" style="left: 27px;" onclick="showContent('content2')"></a>
+                        <a href="#" class="switcher" style="left: 54px;" onclick="showContent('content3')"></a>
+                        <a href="#" class="switcher" style="left: 81px;" onclick="showContent('content4')"></a>
+                        <a href="#" class="switcher" style="left: 108px;" onclick="showContent('content5')"></a>
+                        <a href="#" class="switcher" style="left: 135px;" onclick="showContent('content6')"></a>
+                        <a href="#" class="switcher" style="right: 0px;" onclick="showContent('content7')"></a>
+                      </div>
+                      <div class="content display-none" id="content7" style="background-image: url('images/index/index_7.png');">
+                        <a href="06/06_2.htm" class="chapter_link" style="top: 146px; right: 30px; width: 118px; height: 18px;"></a>
+                        <a href="#" class="switcher" style="left: 0px;" onclick="showContent('content1')"></a>
+                        <a href="#" class="switcher" style="left: 27px;" onclick="showContent('content2')"></a>
+                        <a href="#" class="switcher" style="left: 54px;" onclick="showContent('content3')"></a>
+                        <a href="#" class="switcher" style="left: 81px;" onclick="showContent('content4')"></a>
+                        <a href="#" class="switcher" style="left: 108px;" onclick="showContent('content5')"></a>
+                        <a href="#" class="switcher" style="left: 135px;" onclick="showContent('content6')"></a>
+                        <a href="#" class="switcher" style="left: 162px;" onclick="showContent('content7')"></a>
+                      </div>
+                    </div>
+                    <div class="bottom_block">
+                      <img src="images/index/logo.png" alt="">
+                    </div>
+                  </td>
+                  <td width="5" rowspan="2"><img src="images/02.jpg" width="5" height="450"></td>
+                </tr>
+                <tr> 
+                  <td height="4"><img src="images/03.jpg" width="756" height="4"></td>
+                </tr>
+              </table></td>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
 </body>
+<script>
+  function showContent(contentId) {
+    event.preventDefault()
+    const contentDivs = document.querySelectorAll('.content');
+    contentDivs.forEach(
+        div => {div.style.display = 'none';}
+    );
+    document.getElementById(contentId).style.display = 'block';
+  }
+</script>
 </html>
