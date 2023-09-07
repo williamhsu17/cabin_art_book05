@@ -4,14 +4,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>無標題文件</title>
 <style type="text/css">
-<!--
 .unnamed1 {
 	font-family: "新細明體", "Arial";
 	font-size: 12px;
 	line-height: 21px;
 	font-weight: bold;
 }
--->
 </style>
 </head>
 
@@ -30,10 +28,63 @@
   </tr>
   <tr>
     <td height="200"><img src="images/left-02.gif" width="25" height="200"></td>
-    <td><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="305" height="200">
-        <param name="movie" value="images/02.swf">
-        <param name="quality" value="high">
-        <embed src="images/02.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="305" height="200"></embed></object></td>
+    <td>
+      <style>
+        .head_container {
+          background-image: url('../images/04_2/02[0].png');
+          width: 305px;
+          height: 200px;
+          position: relative;
+        }
+        .btn_return {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          text-decoration: none;
+          color: #90534f;
+          padding-left: 5px;
+        }
+        #mp3Dropdown {
+          position: absolute;
+          top: 0px;
+          right: 5px;
+          margin-top: 2px;
+          margin-right: 5px;
+          margin-bottom: 2px;
+        }
+        #audioPlayer {
+          display: none;
+        }
+      </style>
+      <div class="head_container">
+        <a href="../04_2.htm" class="btn_return" target="_top">返回</a>
+        <select id="mp3Dropdown" onclick="playAudio()">
+            <option value="../images/04_2/02[0].mp3">mov 1</option>
+            <option value="../images/04_2/02[1].mp3">mov 2</option>
+            <option value="../images/04_2/02[2].mp3">mov 3</option>
+            <option value="../images/04_2/02[3].mp3">mov 4</option>
+            <option value="../images/04_2/02[4].mp3">mov 5</option>
+            <option value="">-</option>
+            <!-- ... add more songs as needed -->
+        </select>
+        
+        <!-- Audio Player -->
+        <audio id="audioPlayer" controls></audio>
+        <script>
+          function playAudio() {
+              const dropdown = document.getElementById('mp3Dropdown');
+              const audioPlayer = document.getElementById('audioPlayer');
+
+              const selectedMp3 = dropdown.options[dropdown.selectedIndex].value;
+
+              console.log('play')
+              console.log(selectedMp3)
+              audioPlayer.src = selectedMp3;
+              audioPlayer.play();
+          }
+        </script>
+      </div>
+    </td>
   </tr>
   <tr>
     <td background="images/left-bg.gif">&nbsp;</td>
