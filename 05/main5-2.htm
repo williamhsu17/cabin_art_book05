@@ -67,7 +67,7 @@ a:hover {
             Brahms：Academic Festival Overture in C minor (Op.80)BRT Philharmonic 
             Orchestra / Rahbari (from Naxos 8.551109)</td>
           <td bgcolor="#e7e3dc"><div align="center"> 
-          <!-- 點擊音檔1 --> <audio data-audio-id="12" class="myAudio"><source src="sound/song012.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>    
+          <!-- 點擊音檔1 --> <audio data-audio-id="12" class="myAudio"><source src="sound/song12.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>    
 <img data-audio-id="12" class="sound_image" src="../images/sound2.png" alt="" style=" height:45px; cursor: pointer;">
  </div> 
           <!-- end 點擊音檔1 -->   </div></td>
@@ -166,4 +166,33 @@ a:hover {
   </tr>
 </table>
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('.sound_image');
+      
+      images.forEach(img => {
+          img.addEventListener('click', function() {
+              const audioId = this.getAttribute('data-audio-id');
+              const audioElement = document.querySelector(`audio[data-audio-id="${audioId}"]`);
+
+              // Pause any other playing audios
+              const allAudios = document.querySelectorAll('.myAudio');
+              allAudios.forEach(audio => {
+                  if (audio !== audioElement && !audio.paused) {
+                      audio.pause();
+                  }
+              });
+
+              // Toggle play/pause for the clicked audio
+              if (audioElement.paused) {
+                  audioElement.play();
+              } else {
+                  audioElement.pause();
+              }
+          });
+      });
+  });
+</script>
+
 </html>
+
