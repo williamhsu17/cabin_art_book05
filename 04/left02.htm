@@ -13,10 +13,54 @@
   </tr>
   <tr>
     <td height="192"><img src="images/left-02.gif" width="27" height="192"></td>
-    <td><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="301" height="192">
-        <param name="movie" value="images/photoscroller.swf">
-        <param name="quality" value="high">
-        <embed src="images/photoscroller.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="301" height="192"></embed></object></td>
+    <td>
+      <style>
+        .container {
+            width: 301px;
+            height: 192px;
+            overflow: hidden;
+        }
+
+        .slider {
+            width: 1505px;
+            height: 192px;
+            transition: transform 16s;
+        }
+
+        .slider a {
+            float: left;
+        }
+
+        .slider img {
+            width: 301px;
+            height: 192px;
+            display: block;
+        }
+      </style>
+      <div class="container">
+        <div class="slider">
+            <a href="04_1-1.htm" target="_top"><img src="images/menu/photoscroller-01.png" alt="Link 1 Image"></a>
+            <a href="04_2.htm" target="_top"><img src="images/menu/photoscroller-02.png" alt="Link 2 Image"></a>
+            <a href="04_3.htm" target="_top"><img src="images/menu/photoscroller-03.png" alt="Link 3 Image"></a>
+            <a href="04_4.htm" target="_top"><img src="images/menu/photoscroller-04.png" alt="Link 4 Image"></a>
+            <a href="04_5.htm" target="_top"><img src="images/menu/photoscroller-05.png" alt="Link 5 Image"></a>
+        </div>
+      </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var container = document.querySelector('.container');
+            var slider = document.querySelector('.slider');
+
+            container.addEventListener('mouseover', function() {
+                slider.style.transform = 'translateX(-1204px)';
+            });
+
+            container.addEventListener('mouseout', function() {
+                slider.style.transform = 'translateX(0)';
+            });
+        });
+      </script>
+    </td>
   </tr>
   <tr>
     <td background="images/left-bg.gif">&nbsp;</td>
@@ -24,6 +68,58 @@
         <tr>
           <td height="35" valign="bottom"> 
             <div align="center"><img src="images/aaa01.gif" width="178" height="26"></div></td>
+        </tr>
+        <tr>
+          <td align="center">
+            <style>
+              .person_container a {
+                display: inline-block;
+                text-align: center;
+                text-decoration: none;
+                color: black;
+              }
+              .person_container a img {
+                  display: block;
+                  margin: 0 auto;
+                  text-decoration: none;
+              }
+              .name_container span {
+                display: none;
+              }
+            </style>
+            <div class="person_container" style="margin-top: 10px;">
+              <a href="04_2/04_2a.htm" id="person_01" target="_top"><img src="images/04_2/01.png" alt="Link 1 Image"></a>
+              <a href="04_2/04_2b.htm" id="person_02" target="_top"><img src="images/04_2/02.png" alt="Link 2 Image"></a>
+              <a href="04_2/04_2c.htm" id="person_03" target="_top"><img src="images/04_2/03.png" alt="Link 3 Image"></a>
+            </div>
+            <div class="name_container">
+              <span class="name" id="name_01">aaa</span>
+              <span class="name" id="name_02">bbb</span>
+              <span class="name" id="name_03">ccc</span>
+            </div>
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+
+              for (let i = 1; i <= 10; i++) {
+                  let num = String(i).padStart(2, '0');
+
+                  let person = document.getElementById(`person_${num}`);
+                  let name = document.getElementById(`name_${num}`);
+
+                  if (person && name) { // Ensure both elements exist
+                      person.addEventListener('mouseover', function() {
+                        console.log()
+                          name.style.display = 'block'; // Show the name on hover
+                      });
+
+                      person.addEventListener('mouseout', function() {
+                          name.style.display = 'none'; // Hide the name when not hovering
+                      });
+                  }
+              }
+              });
+            </script>
+          </td>
         </tr>
         <tr>
           <td><div align="center"> 

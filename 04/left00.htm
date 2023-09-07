@@ -12,11 +12,56 @@
     <td background="images/left-03.gif"><div align="center"><img src="images/title-01.gif" width="289" height="83"></div></td>
   </tr>
   <tr>
-    <td height="192"><img src="images/left-02.gif" width="27" height="192"></td>
-    <td><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="301" height="192">
-        <param name="movie" value="images/photoscroller-01.swf">
-        <param name="quality" value="high">
-        <embed src="images/photoscroller-01.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="301" height="192"></embed></object></td>
+    <td height="192">
+      <img src="images/left-02.gif" width="27" height="192"></td>
+      <td>
+        <style>
+          .container {
+              width: 301px;
+              height: 192px;
+              overflow: hidden;
+          }
+
+          .slider {
+              width: 1505px;
+              height: 192px;
+              transition: transform 16s;
+          }
+
+          .slider a {
+              float: left;
+          }
+
+          .slider img {
+              width: 301px;
+              height: 192px;
+              display: block;
+          }
+        </style>
+        <div class="container">
+          <div class="slider">
+              <a href="04_1-1.htm" target="_top"><img src="images/menu/photoscroller-01.png" alt="Link 1 Image"></a>
+              <a href="04_2.htm" target="_top"><img src="images/menu/photoscroller-02.png" alt="Link 2 Image"></a>
+              <a href="04_3.htm" target="_top"><img src="images/menu/photoscroller-03.png" alt="Link 3 Image"></a>
+              <a href="04_4.htm" target="_top"><img src="images/menu/photoscroller-04.png" alt="Link 4 Image"></a>
+              <a href="04_5.htm" target="_top"><img src="images/menu/photoscroller-05.png" alt="Link 5 Image"></a>
+          </div>
+        </div>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              var container = document.querySelector('.container');
+              var slider = document.querySelector('.slider');
+
+              container.addEventListener('mouseover', function() {
+                  slider.style.transform = 'translateX(-1204px)';
+              });
+
+              container.addEventListener('mouseout', function() {
+                  slider.style.transform = 'translateX(0)';
+              });
+          });
+        </script>
+      </td>
   </tr>
   <tr>
     <td background="images/left-bg.gif">&nbsp;</td>
