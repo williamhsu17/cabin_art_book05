@@ -29,13 +29,13 @@ BODY {scrollbar-face-color:5D4606;
             <p class="w"><font color="#663300"> 　　或許是因為經歷了兩次世界大戰，作曲家對於音樂的表達更直接、更赤裸裸地，不和諧、刺耳的聲音視為創作的必然。二十世紀的古典音樂已無法以單一的概念，像巴洛克、浪漫去區分，這似乎也成為二十世紀人類文明發展的最佳縮影。</font></p>
             <p class="w"><font color="#660000"><strong>結語：</strong></font><font color="#333333">　</font><font color="#333333"> 
               </font></p>
-            <p class="w"><font color="#663300">　　欣賞音樂需要的是一個安靜的環境，一顆沉靜的心。古典音樂是理性思考的結果，唯有從思維邏輯著手，方有可能欣賞到古典音樂之美。多聽、多看、多思考是音樂入門的不二法門，只要持之以恆，終有一天你的耳朵會為你自己開一扇門的。</font><font color="#333333"> 
-              <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="170" height="20">
-                <param name="movie" value="images/song06.swf">
-                <param name="quality" value="high">
-                <param name="wmode" value="transparent">
-                <embed src="images/song06.swf" width="170" height="20" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent"></embed></object>
-              <br>
+            <p class="w"><font color="#663300">　　欣賞音樂需要的是一個安靜的環境，一顆沉靜的心。古典音樂是理性思考的結果，唯有從思維邏輯著手，方有可能欣賞到古典音樂之美。多聽、多看、多思考是音樂入門的不二法門，只要持之以恆，終有一天你的耳朵會為你自己開一扇門的。</font><font color="#333333">  <br>
+              <!-- 點擊產生聲音區 1 -->
+<audio data-audio-id="1" class="myAudio"><source src="images/song06.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>
+    
+<img data-audio-id="1" class="sound_image" src="images/song06.png" alt="" style="cursor: pointer; height:30px;">
+<!-- end 點擊產生聲音區 1 -->   
+             
               </font></p></td>
         </tr>
       </table>
@@ -43,4 +43,31 @@ BODY {scrollbar-face-color:5D4606;
   </tr>
 </table>
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('.sound_image');
+      
+      images.forEach(img => {
+          img.addEventListener('click', function() {
+              const audioId = this.getAttribute('data-audio-id');
+              const audioElement = document.querySelector(`audio[data-audio-id="${audioId}"]`);
+
+              // Pause any other playing audios
+              const allAudios = document.querySelectorAll('.myAudio');
+              allAudios.forEach(audio => {
+                  if (audio !== audioElement && !audio.paused) {
+                      audio.pause();
+                  }
+              });
+
+              // Toggle play/pause for the clicked audio
+              if (audioElement.paused) {
+                  audioElement.play();
+              } else {
+                  audioElement.pause();
+              }
+          });
+      });
+  });
+</script>
 </html>
