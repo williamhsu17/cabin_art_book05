@@ -49,23 +49,21 @@ function openIT1(theURL,W,H, wname) {
 </SCRIPT>
 </HEAD>
 <body bgcolor="EDFBFC" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-<table width="95%" border="0" align="left" cellpadding="5" cellspacing="0" class="www">
+<table width="500" border="0" align="left" cellpadding="5" cellspacing="0" class="www">
   <tr> 
-    <td width="500" height="35"><br>
-      <table width="500" height="30" border="0" cellpadding="0" cellspacing="0">
+    <td width="500" height="35"><table width="500" height="30" border="0" cellpadding="0" cellspacing="0">
         <tr> 
           <td background="images/title2.gif"><div align="right"> </div></td>
         </tr>
-      </table></td>
-    <td>&nbsp;</td>
+    </table></td>
   </tr>
   <tr> 
-    <td colspan="2"> <font color="#660000">&nbsp;</font> <div align="left"> <font color="#660000"><strong>鋼琴家族：</strong></font><br>
-        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="450" height="250">
-          <param name="movie" value="images/piano01.swf">
-          <param name="quality" value="high">
-          <embed src="images/piano01.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="450" height="250"></embed></object>
-      </div></td>
+    <td colspan="2"><div align="left">
+      <p><font color="#660000"><strong>鋼琴家族</strong> ：</font><!--<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="500" height="300">
+            <param name="movie" value="images/main2d01.swf">
+            <param name="quality" value="high">
+            <embed src="images/main2d01.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="500" height="300"></embed></object>--></p>
+</div></td>
   </tr>
   <tr>
     <td align="center">
@@ -113,65 +111,56 @@ function openIT1(theURL,W,H, wname) {
             width: 140px;
             height: 40px;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 13px;
             text-align: left;
           }          
         </style>
         <div class="side_button_group" style="margin: 0 auto;">
-          <a href="#" class="image_button" id="link_01" onclick="showContent('content1')">大鍵琴（Harpsichord）</a>
-          <a href="#" class="image_button" id="link_02" onclick="showContent('content2')">古鋼琴（Clavichord）</a>
-          <a href="#" class="image_button" id="link_03" onclick="showContent('content3')">古典鋼琴（Fortepiano）</a>
-          <a href="#" class="image_button" id="link_04" onclick="showContent('content4')">現代鋼琴（pianoforte）</a>
+          <a href="#" class="image_button" id="link_01" onClick="showContent('content1')"><img src="images/2a/piano (1).png" height="42"></a>
+          <a href="#" class="image_button" id="link_02" onClick="showContent('content2')"><img src="images/2a/piano (2).png" height="42"></a>
+          <a href="#" class="image_button" id="link_03" onClick="showContent('content3')"><img src="images/2a/piano (2).png" height="42"></a>
+          <a href="#" class="image_button" id="link_04" onClick="showContent('content4')"><img src="images/2a/piano (4).png" height="42"></a>
         </div>
         <div class="content" id="content1">
           <div class="ins_section">
-            <img src="images/2a/piano01[1].png" alt="">
-            <div class="video_section">
-              <p>大鍵琴（Harpsichord）</p>
-              <a href="http://" class="video_link"><img src="../images/001/1-2/main02-2[2].png" alt=""></a>
+          <img src="images/2a/piano01[1].gif" width="264" height="175;" onmouseover="this.src='images/2a/piano01[1-1].jpg';" onmouseout="this.src='images/2a/piano01[1].gif'">
+              <div class="video_section">
+              <p>大鍵琴</p>
+              <!-- 點擊產生聲音區 1 -->
+        <audio data-audio-id="1" class="myAudio">
+          <source src="images/2a/song03.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <div class="sound_play_block" style="width: 31px;">
+          <img data-audio-id="1" class="sound_image" src="images/music00.jpg" alt="" style="width: 100%; cursor: pointer;">
+        </div>
+          <!-- end 點擊產生聲音區 1 -->
             </div>
-          </div>
-          <div class="content_section">
-            <p>大鍵琴（Harpsichord）</p>
-            <p>大約至1500年...</p>
           </div>
         </div>
-        <div class="content display-none" id="content2">
+          <div class="content display-none" id="content2">
           <div class="ins_section">
-            <img src="images/2a/piano01[5].png" alt="">
-            <div class="video_section" style="width: 256px;">
-              <p style="width: 256px;">古鋼琴（Clavichord）</p>
-              
+          <img src="images/2a/piano01[5].gif" width="264" height="175"  onmouseover="this.src='images/2a/piano01[5-1].jpg';" onmouseout="this.src='images/2a/piano01[5].gif'">
+            <div class="video_section">
+              <p>古鋼琴</p><img src="images/color00.jpg" alt="">
             </div>
-          </div>
-          <div class="content_section">
-            <p>古鋼琴（Clavichord）</p>
-            <p>大約至1500年...</p>
           </div>
         </div>
         <div class="content display-none" id="content3">
           <div class="ins_section">
-            <img src="images/2a/piano01[6].png" alt="">
-            <div class="video_section" style="width: 256px;">
-              <p style="width: 256px;">古典鋼琴（Fortepiano）</p>
+            <img src="images/2a/piano01[6].gif" width="264" height="175"  onmouseover="this.src='images/2a/piano01[6-1].jpg';" onmouseout="this.src='images/2a/piano01[6].gif'">
+            <div class="video_section" style="width: 264px;">
+              <p>古典鋼琴</p><img src="images/color00.jpg" alt="">
             </div>
-          </div>
-          <div class="content_section">
-            <p>古典鋼琴（Fortepiano）</p>
-            <p>大約至1500年...</p>
           </div>
         </div>
         <div class="content display-none" id="content4">
           <div class="ins_section">
-            <img src="images/2a/piano01[7].png" alt="">
+            <img src="images/2a/piano01[7].gif" width="264" height="175"  onmouseover="this.src='images/2a/piano01[7-1].jpg';" onmouseout="this.src='images/2a/piano01[7].gif'">
             <div class="video_section">
-              <p>現代鋼琴（pianoforte）</p>
-              <a href="http://" class="video_link"><img src="../images/001/1-2/main02-2[2].png" alt=""></a>
+              <p>現代鋼琴</p>
+              <a href="https://youtu.be/WcjkXuEO0H0" target="_blank" class="video_link"><img src="images/main02-2[2].png" alt=""></a>
             </div>
-          </div>
-          <div class="content_section">
-            <p>古典鋼琴（Fortepiano）</p>
-            <p>大約至1500年...</p>
           </div>
         </div>
         <script src="../js/content.js"></script>
@@ -180,4 +169,31 @@ function openIT1(theURL,W,H, wname) {
   </tr>
 </table>
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('.sound_image');
+      
+      images.forEach(img => {
+          img.addEventListener('click', function() {
+              const audioId = this.getAttribute('data-audio-id');
+              const audioElement = document.querySelector(`audio[data-audio-id="${audioId}"]`);
+
+              // Pause any other playing audios
+              const allAudios = document.querySelectorAll('.myAudio');
+              allAudios.forEach(audio => {
+                  if (audio !== audioElement && !audio.paused) {
+                      audio.pause();
+                  }
+              });
+
+              // Toggle play/pause for the clicked audio
+              if (audioElement.paused) {
+                  audioElement.play();
+              } else {
+                  audioElement.pause();
+              }
+          });
+      });
+  });
+</script>
 </html>
