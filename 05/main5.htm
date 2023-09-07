@@ -55,13 +55,12 @@ a:hover {
           <td bgcolor="#f2f0ec">巴哈：G弦之歌 西崎崇子、亞歷山大．亞布洛可夫 / 小提琴<br>
             Bach：Air on the G StringTakako Nishizaki, Alexander Jablokov / Violin 
             (from Naxos 8.550194)</td>
-          <td bgcolor="#f2f0ec"><div align="center"> 
-              <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="45" height="45">
-                <param name="movie" value="images/song01.swf">
-                <param name="quality" value="high">
-                <param name="wmode" value="transparent">
-                <embed src="images/song01.swf" width="45" height="45" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent"></embed></object>
-            </div></td>
+          <td bgcolor="#f2f0ec"><div align="center">
+            <!-- 點擊音檔1 --> <audio data-audio-id="1" class="myAudio"><source src="sound/song01.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>    
+<img data-audio-id="1" class="sound_image" src="../images/sound.png" alt="" style=" height:45px; cursor: pointer;">
+ </div> 
+          <!-- end 點擊音檔1 -->    
+          </div></td>
         </tr>
         <tr> 
           <td valign="top" bgcolor="#e7e3dc"><div align="right">2.</div></td>
@@ -668,4 +667,31 @@ a:hover {
   </tr>
 </table>
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('.sound_image');
+      
+      images.forEach(img => {
+          img.addEventListener('click', function() {
+              const audioId = this.getAttribute('data-audio-id');
+              const audioElement = document.querySelector(`audio[data-audio-id="${audioId}"]`);
+
+              // Pause any other playing audios
+              const allAudios = document.querySelectorAll('.myAudio');
+              allAudios.forEach(audio => {
+                  if (audio !== audioElement && !audio.paused) {
+                      audio.pause();
+                  }
+              });
+
+              // Toggle play/pause for the clicked audio
+              if (audioElement.paused) {
+                  audioElement.play();
+              } else {
+                  audioElement.pause();
+              }
+          });
+      });
+  });
+</script>
 </html>
