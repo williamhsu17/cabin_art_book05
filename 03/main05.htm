@@ -28,11 +28,11 @@ BODY {scrollbar-face-color:89BC40;
     <td><p><span class="www">　　欣賞古典音樂入門一個最有效的方法，就是聽音樂說故事。歷史上最早有主題情節的器樂音樂就是三百年前義大利作曲家韋瓦第（Antonio 
         Vivaldi, 1678- 1741）所寫的小提琴協奏曲「四季」。這首作於1725年的器樂協奏曲，是在描寫一年四季春、夏、秋、冬，人與大自然互動的現象。最特殊的地方在於韋瓦弟為每一季都寫了詩，用文字來說明每段樂句所描寫的人事物，為聽者提供了一手的聲音畫面，茲將第一首「春」的詩翻譯如下：</span></p>
       <p><font color="#660000">　
-        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="100" height="20">
-          <param name="movie" value="images/song03-1.swf">
-          <param name="quality" value="high">
-          <param name="wmode" value="transparent">
-          <embed src="images/song03-1.swf" width="100" height="20" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent"></embed></object>
+         <!-- 點擊產生聲音區  -->
+       <audio data-audio-id="1" class="myAudio"><source src="images/song03-1.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>    
+<img data-audio-id="1" class="sound_image" src="images/song03-1.png" alt="" style=" height:25px; cursor: pointer;">
+ </div> 
+        <!-- end 點擊產生聲音區  -->  
         <br>
         </font><font color="#666600">　</font><font color="#333300">A. 春天快樂地來了。<br>
         　B. 小鳥們用快樂的歌聲歡迎春天的到來。<br>
@@ -40,20 +40,20 @@ BODY {scrollbar-face-color:89BC40;
         　D. 天空暗了下來，充滿了打雷的聲音與閃電的亮光。<br>
         　E. 過後，不管怎樣，小鳥們又都回來重新唱歌。</font></p>
       <p><font color="#660000">　
-        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="100" height="20">
-          <param name="movie" value="images/song03-2.swf">
-          <param name="quality" value="high">
-          <param name="wmode" value="transparent">
-          <embed src="images/song03-2.swf" width="100" height="20" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent"></embed></object>
+         <!-- 點擊產生聲音區  -->
+       <audio data-audio-id="2" class="myAudio"><source src="images/song03-2.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>    
+<img data-audio-id="2" class="sound_image" src="images/song03-2.png" alt="" style=" height:25px; cursor: pointer;">
+ </div> 
+        <!-- end 點擊產生聲音區  -->  
         </font><br>
         <font color="#666600">　<font color="#333300">F. 在一片愉悅、充滿花朵的草原上，牧羊人睡在沙沙作響的 
         下，旁邊躺著他忠實的狗狗。</font></font></p>
       <p><font color="#660000">　 
-        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="100" height="20">
-          <param name="movie" value="images/song03-3swf.swf">
-          <param name="quality" value="high">
-          <param name="wmode" value="transparent">
-          <embed src="images/song03-3swf.swf" width="100" height="20" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent"></embed></object>
+         <!-- 點擊產生聲音區  -->
+       <audio data-audio-id="3" class="myAudio"><source src="images/song03-3.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>    
+<img data-audio-id="3" class="sound_image" src="images/song03-3.png" alt="" style=" height:25px; cursor: pointer;">
+ </div> 
+        <!-- end 點擊產生聲音區  -->  
         </font><br>
         <font color="#666600">　<font color="#333300">G. 在鄉村風笛的節慶聲音中，少女與牧羊人在光輝燦爛的春天天空之下盡情地跳舞。</font></font></p>
       <p><span class="www"><strong>入門進階：</strong>建議在欣賞此曲時，將音樂語法單元中之相關語法運用在這首樂曲上。<br>
@@ -63,4 +63,32 @@ BODY {scrollbar-face-color:89BC40;
 <div id="Layer1" style="position:absolute; left:274px; top:12px; width:191px; height:31px; z-index:1" class="www"><font color="#990000">（請聽音樂導聆CD 
   track 4、5）</font></div>
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('.sound_image');
+      
+      images.forEach(img => {
+          img.addEventListener('click', function() {
+              const audioId = this.getAttribute('data-audio-id');
+              const audioElement = document.querySelector(`audio[data-audio-id="${audioId}"]`);
+
+              // Pause any other playing audios
+              const allAudios = document.querySelectorAll('.myAudio');
+              allAudios.forEach(audio => {
+                  if (audio !== audioElement && !audio.paused) {
+                      audio.pause();
+                  }
+              });
+
+              // Toggle play/pause for the clicked audio
+              if (audioElement.paused) {
+                  audioElement.play();
+              } else {
+                  audioElement.pause();
+              }
+          });
+      });
+  });
+</script>
+
 </html>

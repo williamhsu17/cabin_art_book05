@@ -54,11 +54,11 @@ MM_reloadPage(true);
         </tr>
       </table>
       <p class="www">　　通常一首歌曲或樂曲因其大的樂段區分方式，有所謂的二段體（Binary form）與三段體（Ternary form）之分。例如巴哈的「G弦之歌」就是一首著名的二段體樂曲。<font color="#990000"> 
-        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="120" height="20">
-          <param name="movie" value="images/song01.swf">
-          <param name="quality" value="high">
-          <param name="wmode" value="transparent">
-          <embed src="images/song01.swf" width="120" height="20" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent"></embed></object>
+        <!-- 點擊產生聲音區  -->
+       <audio data-audio-id="1" class="myAudio"><source src="images/song01.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>    
+<img data-audio-id="1" class="sound_image" src="images/song01.png" alt="" style=" height:25px; cursor: pointer;">
+ </div> 
+        <!-- end 點擊產生聲音區  -->  
         （請聽音樂導聆CD track 4、5） </font></p>
       <p class="www">　　而我們的國歌則是一首短的三段體的歌曲，其樂段分法如下：<font color="#990000"> </font></p>
       <blockquote> 
@@ -72,4 +72,33 @@ MM_reloadPage(true);
 <div id="Layer1" style="position:absolute; left:174px; top:12px; width:191px; height:31px; z-index:1" class="www"><font color="#990000">（請聽音樂導聆CD 
   track 1）</font></div>
 </body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('.sound_image');
+      
+      images.forEach(img => {
+          img.addEventListener('click', function() {
+              const audioId = this.getAttribute('data-audio-id');
+              const audioElement = document.querySelector(`audio[data-audio-id="${audioId}"]`);
+
+              // Pause any other playing audios
+              const allAudios = document.querySelectorAll('.myAudio');
+              allAudios.forEach(audio => {
+                  if (audio !== audioElement && !audio.paused) {
+                      audio.pause();
+                  }
+              });
+
+              // Toggle play/pause for the clicked audio
+              if (audioElement.paused) {
+                  audioElement.play();
+              } else {
+                  audioElement.pause();
+              }
+          });
+      });
+  });
+</script>
+
 </html>
