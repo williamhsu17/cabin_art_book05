@@ -30,7 +30,7 @@ function openchromeless(theURL, wname, W, H, NONEgrf, CLOSEdwn, CLOSEup, CLOSEov
 	if (isie && iswin) {
 
 var chromeTIThtml = '\n' +
-'<html> 																				'+ '\n'+
+'<html lang="zh-Hant-TW"> 																				'+ '\n'+
 '<head> 																				'+ '\n'+
 '<title>&nbsp;CHROMELESS WINDOWS / TITLEBAR</title> 															'+ '\n'+
 '<style type="text/css"> 																		'+ '\n'+
@@ -125,7 +125,7 @@ chromeTIThtml += '\n' +
 '</html> 																				'+ '\n'
 
 var chromeFRMhtml = '' +
-'<HTML>																							'+ '\n'+
+'<html lang="zh-Hant-TW">																							'+ '\n'+
 '<HEAD>                                                                         													'+ '\n'+
 '<TITLE>'+ titWIN +'</TITLE>                                          															'+ '\n'+
 '</HEAD>                                                                        													'+ '\n'+
