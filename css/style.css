@@ -2,3 +2,29 @@
     width: 100%;
     height: auto;
 }
+a.sr-only {
+    padding: .1rem;
+    font-size: 12px;
+    background: white;
+    color: black;
+    position: absolute;
+    top: -2.5rem;
+    left: 0;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 100;
+    text-decoration: none;
+}
+
+a.sr-only:focus {
+    position: absolute;
+    left: 0;
+    top: 0;
+    outline-color: transparent;
+    -webkit-transition: top .1s ease-in;
+    transition: top .1s ease-in;
+    border: #ffbf47 solid .2rem;
+    background: #ffbf47;
+    color: #000;
+    font-weight: 400;
+}
