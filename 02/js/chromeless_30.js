@@ -114,7 +114,12 @@ chromeTIThtml += '\n' +
 '	} 																				'+ '\n'+
 '} 																					'+ '\n'+
 '</script> 																				'+ '\n'+
-'</head> 																				'+ '\n'+
+'</head>
+<noscript>
+  <div style="float: left; color: #f00;">
+      很抱歉，網站的某些功能在JavaScript沒有啟用的狀態下無法正常使用。
+  </div>
+</noscript> 																				'+ '\n'+
 '<body onresize="setLAYOUT()" bgcolor='+winBGCOLOR+'> 															'+ '\n'+
 '<div id=crtMOVE><img onmousedown="winSTATUS=\'down\';moveWIN()" onmouseup="winSTATUS=\'up\';moveWIN()" border=0 src="'+NONEgrf+'" width=110% height=500></div> 	'+ '\n'+
 '<div id=txtTITLE>'+ '<table width=100% height=20 border=0 cellpadding=0 cellspacing=0><tr><td valign=middle align=left>'+titHTML+'</td></tr></table>' +'</div> 	'+ '\n'+
@@ -129,7 +134,12 @@ var chromeFRMhtml = '' +
 '<html lang="zh-Hant-TW">																							'+ '\n'+
 '<HEAD>                                                                         													'+ '\n'+
 '<TITLE>'+ titWIN +'</TITLE>                                          															'+ '\n'+
-'</HEAD>                                                                        													'+ '\n'+
+'</head>
+<noscript>
+  <div style="float: left; color: #f00;">
+      很抱歉，網站的某些功能在JavaScript沒有啟用的狀態下無法正常使用。
+  </div>
+</noscript>                                                                        													'+ '\n'+
 '<script> 																						'+ '\n'+
 'top.mainloaded = false																					'+ '\n'+
 'function generatetitle() { 																				'+ '\n'+
