@@ -53,7 +53,7 @@ BODY {scrollbar-face-color:2BA1A2;
         </audio>
 
         <div class="sound_play_block" style="width: 100px;">
-          <img data-audio-id="1" class="sound_image" src="images/2-1/song (01).png" alt="格雷果聖歌_歌曲播放player" title="格雷果聖歌_歌曲播放" style="width: 100%; cursor: pointer;">
+          <img data-audio-id="1" class="sound_image" src="images/2-1/song (01).png" alt="格雷果聖歌_歌曲播放player" title="格雷果聖歌_歌曲播放" tabindex="0" style="width: 100%; cursor: pointer;">
         </div>
         <!-- end 點擊產生聲音區 1 -->
         </span></p>
@@ -77,7 +77,7 @@ BODY {scrollbar-face-color:2BA1A2;
         </audio>
 
         <div class="sound_play_block" style="width: 180px;">
-          <img data-audio-id="2" class="sound_image" src="images/2-1/song (03).png" alt="庫普蘭_歌曲播放player" title="庫普蘭_歌曲播放" style="width: 100%; cursor: pointer;">
+          <img data-audio-id="2" class="sound_image" src="images/2-1/song (03).png" alt="庫普蘭_歌曲播放player" title="庫普蘭_歌曲播放" tabindex="0" style="width: 100%; cursor: pointer;">
         </div>
         <!-- end 點擊產生聲音區 2 -->
         </span></p>
@@ -103,6 +103,30 @@ BODY {scrollbar-face-color:2BA1A2;
       const images = document.querySelectorAll('.sound_image');
       
       images.forEach(img => {
+          img.addEventListener('focus', function() {
+              this.addEventListener('keydown', handleEnterPress);
+          });
+          function handleEnterPress(event) {
+              if (event.keyCode === 13) {
+                const audioId = this.getAttribute('data-audio-id');
+                const audioElement = document.querySelector(`audio[data-audio-id="${audioId}"]`);
+
+                // Pause any other playing audios
+                const allAudios = document.querySelectorAll('.myAudio');
+                allAudios.forEach(audio => {
+                    if (audio !== audioElement && !audio.paused) {
+                        audio.pause();
+                    }
+                });
+
+                // Toggle play/pause for the clicked audio
+                if (audioElement.paused) {
+                    audioElement.play();
+                } else {
+                    audioElement.pause();
+                }
+              }
+          }
           img.addEventListener('click', function() {
               const audioId = this.getAttribute('data-audio-id');
               const audioElement = document.querySelector(`audio[data-audio-id="${audioId}"]`);

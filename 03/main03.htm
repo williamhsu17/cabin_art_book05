@@ -62,7 +62,7 @@ MM_reloadPage(true);
       <p class="www">　　通常一首歌曲或樂曲因其大的樂段區分方式，有所謂的二段體（Binary form）與三段體（Ternary form）之分。例如巴哈的「G弦之歌」就是一首著名的二段體樂曲。<font color="#990000"> 
         <!-- 點擊產生聲音區  -->
        <audio data-audio-id="1" class="myAudio"><source src="images/song01.mp3" type="audio/mpeg"> Your browser does not support the audio element.</audio>    
-<img data-audio-id="1" class="sound_image" src="images/song01.png" alt="巴哈-G弦之歌_歌曲播放player" title="巴哈-G弦之歌_歌曲播放" style=" height:25px; cursor: pointer;">
+<img data-audio-id="1" class="sound_image" src="images/song01.png" alt="巴哈-G弦之歌_歌曲播放player" title="巴哈-G弦之歌_歌曲播放" tabindex="0" style=" height:25px; cursor: pointer;">
  </div> 
         <!-- end 點擊產生聲音區  -->  
         <!--（請聽音樂導聆CD track 4、5） --></font></p>
@@ -84,6 +84,30 @@ MM_reloadPage(true);
       const images = document.querySelectorAll('.sound_image');
       
       images.forEach(img => {
+          img.addEventListener('focus', function() {
+              this.addEventListener('keydown', handleEnterPress);
+          });
+          function handleEnterPress(event) {
+              if (event.keyCode === 13) {
+                const audioId = this.getAttribute('data-audio-id');
+                const audioElement = document.querySelector(`audio[data-audio-id="${audioId}"]`);
+
+                // Pause any other playing audios
+                const allAudios = document.querySelectorAll('.myAudio');
+                allAudios.forEach(audio => {
+                    if (audio !== audioElement && !audio.paused) {
+                        audio.pause();
+                    }
+                });
+
+                // Toggle play/pause for the clicked audio
+                if (audioElement.paused) {
+                    audioElement.play();
+                } else {
+                    audioElement.pause();
+                }
+              }
+          }
           img.addEventListener('click', function() {
               const audioId = this.getAttribute('data-audio-id');
               const audioElement = document.querySelector(`audio[data-audio-id="${audioId}"]`);
